@@ -1,0 +1,11 @@
+body{
+    background-image:url(./image/back.jpg);
+}.container
+{
+    background-color: rgb(245, 245, 245);
+    margin-left:350px;
+    margin-right:350px;
+}
+h1{
+    text-align: center;
+}
