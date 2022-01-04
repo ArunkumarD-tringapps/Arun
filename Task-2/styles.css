@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
   }
-  .icon{
+  .spiriticon{
     height:80px;
     background-color: rgb(216, 191, 216);
   }
@@ -26,7 +26,7 @@
     flex-wrap: wrap;
     text-align: center;
   }
-  .b1 {
+  .first {
     padding: 30px;
     height: 250px;
     flex-wrap:wrap;
@@ -36,7 +36,7 @@
     background-size: cover;
     color:rgb(255, 255, 255);
   }
-  .b2 {
+  .middle {
     padding: 30px;
     height: 250px;
     flex-wrap:wrap;
@@ -46,8 +46,7 @@
     background-size: cover;
     color:rgb(255, 255, 255);
   }
-
-  .b3 {
+  .third{
     padding: 50px;
     height: 250px;
     flex-wrap:wrap;
@@ -57,7 +56,6 @@
     background-size: cover;
     color:rgb(255, 255, 255);
   }
-
   .signup{
     padding: 50px;
     height: 250px;
@@ -68,9 +66,7 @@
     background-image: url('image/44.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-   
   }
-  
   .content {
     padding: 5px;
     text-align: center;
@@ -79,25 +75,26 @@
     background-color: rgb(235, 206, 45);
   }
   @media screen and (max-width: 768px) {
-    .b1,
-    .b2,
-    .b3,
-    .signup {
+    .first,
+    .middle,
+    .third,
+    .signup{
        flex: 100%;
-    }
+      }
   }
-  @media screen and (max-width: 768px) and (min-width: 481px) {
-    .b1,
-    .b2,
-    .b3,
-    .signup {
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    .first,
+    .middle,
+    .third,
+    .signup 
+      {
       flex: 50%;
-    }
+      }
   }
   @media screen and (max-width: 480px){
-    .b1,
-    .b2,
-    .b3,
+    .first,
+    .middle,
+    .third,
     .signup {
       flex: 100%;
     }
