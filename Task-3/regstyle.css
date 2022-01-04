@@ -1,6 +1,7 @@
 body{
     background-image:url(./image/back.jpg);
-}.container
+}
+.container
 {
     background-color: rgb(245, 245, 245);
     margin-left:350px;
