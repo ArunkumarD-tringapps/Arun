@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="regstyle.css">
+</head>
+<body>
+<div class="container">
+<h1>REGISTERATION FORM</h1>
+<hr>
+<table align="center" cellpadding = "10">
+    <tr>
+        <td>First Name</td>
+        <td><input type="text" name="FirstName" maxlength="50" placeholder="Firstname" /></td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td><input type="text" name="LastName" maxlength="50" placeholder="Lastname"/></td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>
+           <input type="radio" name="Gender" value="Male" />
+           Male
+           <input type="radio" name="Gender" value="Female" />
+           Female
+        </td>
+    </tr>
+    <tr>
+        <td>Email ID</td>
+        <td><input type="email" name="EmailID" maxlength="100" placeholder="xyz@gmail.com"/></td>
+    </tr>
+    <tr>
+        <td>Address<br /><br /><br /></td>
+        <td><textarea name="Address" rows="10" cols="50"></textarea></td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td><input type="text" name="City" maxlength="50" placeholder="Enter your City"/> </td>
+    </tr>
+    <tr>
+        <td>Pin Code</td>
+        <td><input type="text" name="PinCode" maxlength="6" placeholder="Enter your pincode"/>
+        </td>
+    </tr>
+    <tr>
+        <td>Hobbies</td>
+        <td>
+             <input type="checkbox" name="Play Cricket" value="Play Cricket" />
+             Play Cricket
+             <input type="checkbox" name="Watching Movie" value="Watching Movie" />
+             Watching Movie
+             <input type="checkbox" name="Listening Music" value="Listening Music" />
+             Listening Music
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+        <input type="submit" value="Submit">
+        </td>
+    </tr>
+</table>
+</div>
+</body>
+</html>
