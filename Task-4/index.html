@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+    <title>Crud Operation</title>
+    <link type="text/css" rel="stylesheet" href="styless.css">
+</head>
+
+<body>
+<section class="container">
+<form   id="C4"autocomplete="off" onsubmit="onFormSubmit()">
+ <h1>Welcome@tringapps</h1>
+<!-----------------------FirstName-------------------->
+<div>
+ <label for="firstname">FristName</label><br>
+<input type="text" name="firstname" id="firstname" placeholder="Enter Your FirstName...">
+</div>
+<!-----------------------LastName---------------------->
+<div>
+<label for="lastname"> LastName</label><br>
+<input type="text" name="lastname" id="lastname" placeholder="Enter Your LastName...">
+</div>
+<!-----------------------EmployeeId-------------------->
+<div>
+<label for="empid">EmployeeId</label><br>
+<input type="text" name="empid" id="empid" placeholder="Enter Your empid....">
+</div>
+<!-------------------------Email-------------------->
+<div>
+<label for="email">Email</label><br>
+<input type="mail" name="email" id="email" placeholder="Enter Your Email...">
+ </div>
+<!-------------------------City-------------------->
+<div>
+<label for="city">City</label><br>
+<input type="text" name="city" id="city" placeholder="Enter Your City...">
+</div>
+<!-------------------------MobileNo-------------------->
+ <div>
+<label for="mobilno">MobileNo</label><br>
+<input type="text" name="mobileno" id="mobileno" placeholder="Enter Your mobilno...">
+</div>
+<!-------------------------Gender-------------------->
+<div id="gender" for="gender">
+ <label>Gender</label>
+ <input type="radio"id="male"name="gender" value="Male">
+ <label for="Male"> Male</label>
+ <input type="radio"id="female"name="gender" value="Female">
+ <label for="Female"> Female</label>
+ </div>
+<!------------------------role------------------------>
+<div id="role" for="role">
+<label for="role" >Role</label><br>
+<input type="checkbox" name="role" id="englishchk" value="SoftwareTrainee"/>
+<label for="SoftwareTrainee">SoftwareTrainee</label>
+<input type="checkbox" name="role" id="FullStackDeveloper"value="FullStackDeveloper"/>
+<label for="FullStackDeveloper">FullStackDeveloper</label>
+<input type="checkbox" name="role" id="DataAnalyst"value="DataAnalyst"/>
+<label for="DataAnalyst">DataAnalyst</label>
+</div>
+ <!------------------------Submit and Reset------------------------>
+<div><br>
+ <input type="submit" value="Submit">
+ <input type="reset" value="Reset">
+</div>
+</form>
+</section>
+ <!------------------------Table-------------------->
+                 
+<div class="field" style="background:rgb(252, 238, 179);  padding:20px; margin-top:10px;">
+<table class="list" id="storedata">
+<thead>
+<tr>
+<th>FirstName</th>
+<th>LastName</th>
+<th>EmployeeId</th>
+<th>Email</th>
+<th>City</th>
+<th>MobileNo</th>
+<th>Gender</th>
+<th>Role</th>
+ <th>Action</th>                                
+ </tr>
+</thead>
+ <tbody>
+
+</tbody>
+</table>
+                
+</div>
+    <script type="text/javascript" src="./scripts.js"></script>
+</body>
+</html>
