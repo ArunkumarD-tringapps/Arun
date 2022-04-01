@@ -1,0 +1,36 @@
+
+h1{
+    background-color:rgb(255, 165, 0);
+}
+.input{
+    width: 75%;
+    height: 20px;
+    font-size: 15px;
+    border: 2px solid black;
+    padding: 10px;
+    color: #111111;
+    position: relative;
+    border-radius:5px;
+}
+   button{
+    text-align: center;
+    font-size: 13px;
+    cursor: pointer;
+    padding:14px;
+   }
+.items{
+    padding: 25px;
+    width:450px;
+    background-color:rgb(255, 228, 196);
+    text-align:center;
+}
+.showlist{
+    background-color: rgb(255, 248, 220);
+}
+.options{
+    padding: 25px;
+}
+.complete{
+    text-decoration: line-through;
+
+}

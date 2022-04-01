@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration page</title>
+    <style>
+    .signup{
+        width:350px;
+        height: 550px;
+        margin:auto;
+        border:2px solid black;
+        background-color:rgb(250, 235, 215);
+        text-align:center;
+        border-radius:5px;
+    }
+    label{
+        font-size:18px;
+    } 
+    input{
+         width:80%;
+         padding:8px;
+         border-radius:6px;
+        }
+        #submit{
+            width:300px;
+            height:35px;
+            font-size:18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup"> 
+        <h1>Register here</h1>
+        <form method='post' action="signin.html" onsubmit="return register()">
+            <label>FirstName:</label>
+            <input type="text" placeholder="Enter Your Firstname"id='fname' required><br>
+            <label>LastName:</label>
+            <input type="text" placeholder="Enter Your Lastname" id="lname" required><br>
+            <label>Email-Id:</label>
+            <input type="email" placeholder="Enter Your Email-id" id="email" required><br>
+            <label>Password:</label>
+            <input type="password" placeholder="Enter Your Password" id="password" required><br>
+            <label> Confirm Password:</label>
+            <input type="password" placeholder="Enter Your Confirm Password" id=" Confirmpassword" required><br>
+            <label>MobileNo:</label>
+            <input type="text" placeholder="Enter Your MobileNo" id="mobileno" required><br><br>
+            <input type="submit"  value="submit" id="submit">
+        </form>
+    </div>
+    <script>
+        function register()
+        {
+            alert('welcome');
+            var firstname=document.getElementById('fname').value;
+            var lastname=document.getElementById('lname').value;
+            var email_id=document.getElementById('email').value;
+            var password=document.getElementById('password').value;
+            var conpassword=document.getElementById('Confirmpassword').value;
+            if(password==conpassword){
+                alert("Registeration Sucessfully");
+                var data={
+                    email_id:email_id,
+                    password:password
+                }
+                localStorage.setItem('data',JSON.stringify(data));
+            }
+           else{
+               alert("password is Mismatch");
+               return false;
+           }
+            
+        }
+
+    </script>
+</body>
+</html>

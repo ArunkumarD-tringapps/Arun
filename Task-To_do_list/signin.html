@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in and Sign-up </title>
+    <style>
+        .login{
+            width:350px;
+            height: 350px;
+            margin:auto;
+            border:2px solid black;
+            background-color:rgb(250, 235, 215);
+            text-align:center;
+        }
+        label{
+     
+            font-size:18px;
+        }
+        input{
+            width:80%;
+            padding:8px;
+            border-radius:6px;
+
+        }
+        #submit{
+            width:300px;
+            height:35px;
+            font-size:18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login">
+        <h1>Login</h1>
+    <form action="to_do_list.html"method="get" onSubmit="return checkDetails()">
+        <label>Email-ID</label>
+        <input type="email" placeholder="Enter your Email" name="email" id="email" required><br>
+        <label>Password</label>
+        <input type="password" placeholder="Enter Password" name="password" id='password'required><br><br>
+        <input type="submit" value="submit" id="submit" onclick="to_do_list.html">
+    </form>
+    <p>Not have an account?</p><a href="register.html" target="_blank">Register Here</a>
+</div>
+<script>
+    function checkDetails(){
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    var data = JSON.parse(localStorage.getItem("data"));
+    if(email == data.email_id && password ==data.password){
+        return true;
+    }
+    else{
+        alert("Invalid User Name or Password!");
+        return false;
+    }
+}
+</script>
+</body>
+</html>
