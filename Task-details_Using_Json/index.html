@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display image with json details</title>
+</head>
+<style>
+    body{
+        background-color:rgb(255, 192, 203);
+    }
+    div{
+        padding:20px;
+        margin:30px;
+        background-color:rgb(255, 255, 255);
+        width:400px;
+        height:200px;
+        font-size:25px;
+    }
+    h1{
+       background-color: brown;
+    }
+    label{
+        font-size: 20px;
+    }
+  </style>
+  </head>
+  <body>
+  <center>
+  <h1>Welcome</h2>
+  </center>
+  <div>
+  <form method="get" action="page2.html" target="_blank">
+  <label>Upload your Image</label>
+  <input type="file" accept="image/*" name="image" id="myimg" required /><br>
+  <label>Upload json file</label><br>
+  <input type="file" id="json" accept=".json" required /><br>
+  <input type="submit" value="submit">
+  </div>
+  </form>
+  <script>
+  document.querySelector("#myimg").addEventListener("change",function(){
+  const reader=new FileReader();
+  reader.addEventListener("load",()=>{
+  localStorage.setItem("recent-image", reader.result);
+  console.log(reader.result);
+  }); 
+  reader.readAsDataURL(this.files[0]);
+  });
+  document.getElementById("json").addEventListener("change", function() {
+    var readfile= document.getElementById("json").files[0];
+    var fileread = new FileReader();
+    fileread.onload = function(e) {
+      var content = e.target.result;
+      var data = JSON.parse(content); 
+      window.localStorage.setItem("myObject", JSON.stringify(data));
+    };
+    fileread.readAsText(readfile);
+  });
+  </script>
+  </body>
+  </html>

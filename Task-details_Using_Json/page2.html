@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Display Information</title>
+<style>
+    h3{
+        text-decoration: underline;
+    }
+    #displayimage{
+       
+        border:3px solid rgb(0, 0, 0);
+    }    
+
+</style>
+</head>
+<body>
+
+<h3>Employee Detail</h3>
+
+<img id="displayimage" src="" alt="displayimage" width="250px" height="250px">
+</body>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+const recentImageDataUrl=localStorage.getItem("recent-image");
+if(recentImageDataUrl)
+{
+document.querySelector("#displayimage").setAttribute("src",recentImageDataUrl); 
+console.log(localStorage.getItem("jsons"));
+}
+});
+let newObject = window.localStorage.getItem("myObject");
+var obj=JSON.parse(newObject); 
+for (var key in obj) {
+if (obj.hasOwnProperty(key)) {
+var tag = document.createElement("p");
+tag.setAttribute("class","P") ;
+  var text = document.createTextNode(key + ":" + obj[key]); 
+  tag.appendChild(text); 
+  var element = document.getElementsByTagName("body")[0];
+  element.appendChild(tag);
+}
+}
+</script>
