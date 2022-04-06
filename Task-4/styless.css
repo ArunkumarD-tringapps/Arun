@@ -42,7 +42,7 @@ th,td{
     border-collapse: collapse;
 }
 
-tr:nth-child(even), table.list thread> tr{
+tr:nth-child(even), table.list>tr{
 
      border-collapse: collapse;
 }
