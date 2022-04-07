@@ -37,7 +37,7 @@ function getRadioValue(theRadioGroup) {
     }
 
     function getCheckBox(thisCheckBoxGroup) {
-        checkedValue = [];
+        var checkedValue = [];
         var inputElements = document.getElementsByName(thisCheckBoxGroup);
         for (var i = 0; inputElements[i]; ++i) {
             if (inputElements[i].checked) {
@@ -100,7 +100,7 @@ function updateRecord(formData){
 //Delete the detail
 function onDelete(td){
     if(confirm('Do you want to delete this record?')){
-        row = td.parentElement.parentElement;
+       var row = td.parentElement.parentElement;
         document.getElementById('storedata').deleteRow(row.rowIndex);
     }
     resetForm();
