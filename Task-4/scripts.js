@@ -1,5 +1,5 @@
 var selectedRow = null;
-function onFormSubmit(e){
+function onFormSubmit(_e){
     event.preventDefault();
     var formData = readFormData();
     if(selectedRow === null){
